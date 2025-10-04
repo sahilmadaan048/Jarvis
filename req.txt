@@ -1,0 +1,7 @@
+transformers
+langchain
+langchain-huggingface
+
+pip install speechrecognition
+pip install openai
+pip install wikipedia

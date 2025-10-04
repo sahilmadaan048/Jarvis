@@ -39,7 +39,7 @@ def chat(query):
 
         answer = data["candidates"][0]["content"]["parts"][0]["text"]
 
-        say(answer)
+        # say(answer)
         chatStr += f"{answer}\n"
         return answer
     except Exception as e:
@@ -71,7 +71,7 @@ def ai(prompt):
             f.write(f"Prompt: {prompt}\n\nResponse:\n{text}")
 
         print("AI response:", text)
-        say(text)
+        # say(text)
 
     except Exception as e:
         print(f"Error in ai(): {e}")
@@ -154,3 +154,9 @@ if __name__ == "__main__":
             else:
                 print("Chatting...")
                 chat(query)
+
+
+
+# pip install speechRecongition
+# pip install wikipedia
+# import webBrowser wala is used to access the wb vrowser from the

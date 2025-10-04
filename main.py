@@ -6,7 +6,8 @@ import datetime
 import pywhatkit
 import requests
 import random
-from config import huggingface_api_key
+# from config import huggingface_api_key
+from config import OPENAI_KEY
 
 chatStr = ""
 
@@ -14,7 +15,7 @@ chatStr = ""
 def chat(query):
     global chatStr
     print(chatStr)
-    openai.api_key = apikey
+    openai.api_key = OPENAI_KEY
     chatStr += f"Harry: {query}\n Jarvis: "
     try:
         response = openai.Completion.create(
@@ -121,7 +122,7 @@ if __name__ == '__main__':
                     close_time=2
                 )
 
-            elif "using artificial intelligence" in query.lower():
+            elif "using artifical intelligence" in query.lower():
                 ai(prompt=query)
 
             elif "jarvis quit" in query.lower():
@@ -131,5 +132,5 @@ if __name__ == '__main__':
                 chatStr = ""
 
             else:
-                print("Quitting...")
-                # chat(query)
+                print("Chating...")
+                chat(query)

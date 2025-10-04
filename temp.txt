@@ -1,0 +1,20 @@
+python -m venv venv
+./venv/scripts/activate
+
+pip install -r .\req.txt
+
+huggingface-cli login
+
+Command for Enabling GPU below:
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
+
+
+
+repo link
+https://github.com/techwithtim/Langchain-Transformers-Python.git
+
+youtube link
+http://youtube.com/watch?v=1h6lfzJ0wZw
+
+Harry video
+https://www.youtube.com/watch?v=s_8b5iq4Rvk
